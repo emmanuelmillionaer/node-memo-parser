@@ -18,22 +18,27 @@ A node module providing utility methods to read from Memo-Files
 
 ```js
 var memoFile = new MemoFile('test/fixtures/test.fpt');
-	
-	//get information about Memo-Header 
-	memoFile.MemoHeader;
-	// => { blockSize: 64, nextFreeBlock: 11 }
-	
+
 	//The content-block positions are stored in .DBF-Files as 'M'-fields: https://en.wikipedia.org/wiki/.dbf#File_Architecture_Overview
 	//To read from DBF files, for example the module DBFFile can be used: https://github.com/paypac/DBFFile
 	//To read from the Block at position 8:
+
 	memoFile.getBlockContentAt(8);
+
 	// => Neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit
-	
-	//Additional Block-Header can be found with: 
+```
+
+Utility methods
+
+```js
+	//get information about Memo-Header
+	memoFile.MemoHeader;
+	// => { blockSize: 64, nextFreeBlock: 11 }
+
+
+	//Additional Block-Header information can be found with:
 	memoFile.blockHeader(8));
 	// => { blockSignature: 'text', recordLength: 55 }
-	
-	
 ```
 
 

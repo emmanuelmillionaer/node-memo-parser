@@ -30,7 +30,7 @@ var memoFile = new MemoFile('test/fixtures/test.fpt');
 	// => Neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit
 ```
 
-Utility methods
+Utility methods:
 
 ```js
 	//get information about Memo-Header
@@ -41,6 +41,19 @@ Utility methods
 	//Additional Block-Header information can be found with:
 	memoFile.blockHeader(8));
 	// => { blockSignature: 'text', recordLength: 55 }
+```
+
+File Encodings:
+
+```js
+
+//file content can be read in different encodings
+//example 'base64'
+var memoFile = new MemoFile('test/fixtures/test.fpt', 'base64');
+
+	memoFile.getBlockContentAt(8);
+
+	// => 'TG9yZW0gaXBzdW0gZG9sb3Igc2l0IGFtZXQsIGNvbnNlY3RldHVyLCBhZGlwaXNjaSB2ZWxpdA=='
 ```
 
 

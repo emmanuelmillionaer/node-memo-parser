@@ -1,5 +1,5 @@
 {
-  "name": "memo_node",
+  "name": "memo_file",
   "version": "1.0.0",
   "description": "Parse Memo Files",
   "main": "memoFile.js",

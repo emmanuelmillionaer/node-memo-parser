@@ -11,12 +11,14 @@ A node module providing utility methods to read from Memo-Files
 ### Installation
 
 ```shell
-  npm install memo_node --save
+  npm install memo_file --save
 ```
 
 ### Usage
 
 ```js
+var MemoFile = require('memo_file');
+
 var memoFile = new MemoFile('test/fixtures/test.fpt');
 
 	//The content-block positions are stored in .DBF-Files as 'M'-fields: https://en.wikipedia.org/wiki/.dbf#File_Architecture_Overview

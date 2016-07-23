@@ -1,0 +1,31 @@
+{
+  "name": "memo_node",
+  "version": "1.0.0",
+  "description": "Parse Memo Files",
+  "main": "memoFile.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emmanuelmillionaer/node-memo-parser.git"
+  },
+  "keywords": [
+    "memo",
+    "memo-file",
+    "memo-parser",
+    "dBase III",
+    "dBase",
+    "dbf"
+  ],
+  "author": "Emmanuel Stadler <stadleremmanuel1@gmail.com> (https://github.com/emmanuelmillionaer)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emmanuelmillionaer/node-memo-parser/issues"
+  },
+  "homepage": "https://github.com/emmanuelmillionaer/node-memo-parser#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}

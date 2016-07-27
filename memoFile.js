@@ -19,6 +19,8 @@ var MemoFile = function(path, encoding){
 	this.MemoHeaderLength = 512;
 	this.MemoBlockHeaderLength = 8;
 
+	this.fd = fs.openSync(this.path,'r');
+
 	this.getBlockContentAt = (offset) => {
 		var contentStart = offset * this.MemoHeader.blockSize + this.MemoBlockHeaderLength;
 		var contentEnd = contentStart + this.blockHeader(offset).recordLength;
@@ -51,9 +53,8 @@ var MemoFile = function(path, encoding){
 	this.readBytes = (start,end) => {
 		var length = end - start;
 		var buffer = new Buffer(length);
-		var fd = fs.openSync(this.path,'r');
 
-		fs.readSync(fd, buffer, 0, length, start);
+		fs.readSync(this.fd, buffer, 0, length, start);
 
 		return buffer
 	};
